@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script>
+        window.onload = function() {
+            adjustPDFHeight();
+            
+            // Update PDF height when window is resized
+            window.onresize = adjustPDFHeight;
+
+            function adjustPDFHeight() {
+                var embedElement = document.getElementById('pdf-embed');
+                var windowHeight = window.innerHeight;
+                embedElement.style.height = windowHeight + 'px';
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Embedded PDF -->
+    <embed id="pdf-embed" src="assets/pdf/PORTFOLIO_KATSAROU_THEODORA_23.pdf" type="application/pdf"width="100%" height="800px" />
+</body>
+</html>
